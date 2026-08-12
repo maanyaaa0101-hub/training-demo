@@ -1,4 +1,4 @@
-# **Banking Data Engineering Pipeline — Azure Databricks & Azure Synapse**
+# **Banking Data Engineering Pipeline — Databricks & Azure Synapse**
 
 ## **1\. Project Overview**
 
@@ -148,9 +148,9 @@ This ensures that the transformation stages execute in the correct sequence.
 
 The same overall pipeline is implemented using Azure Synapse Analytics.
 
-**Synapse Flow**
+**Synapse Architecture**
 
-![][image2]
+![][image2]s
 
 ## **Synapse Components**
 
