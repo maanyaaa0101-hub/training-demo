@@ -150,7 +150,7 @@ The same overall pipeline is implemented using Azure Synapse Analytics.
 
 **Synapse Architecture**
 
-![][image2]s
+![][image2]
 
 ## **Synapse Components**
 
