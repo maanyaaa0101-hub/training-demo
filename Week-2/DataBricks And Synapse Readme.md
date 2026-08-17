@@ -8,16 +8,16 @@ The objective is to build the same core data-processing workflow on both platfor
 
 The pipeline covers:
 
-* JSON data ingestion  
+* JSON and CSV data ingestion  
 * Data cleaning and standardization  
 * Basic data quality validation  
 * Data transformations  
 * Bronze, Silver, and Gold data layers  
 * Curated data storage in Delta format  
 * Pipeline/job orchestration  
-* Comparison between Azure Databricks and Azure Synapse implementations
+* Comparison between Databricks and Azure Synapse implementations
 
-The project uses Azure Data Lake Storage Gen2 (ADLS Gen2) as the primary storage layer.
+The project uses Azure Data Lake Storage Gen2 (ADLS Gen2) as the primary storage layer in Azure Synapse.
 
 # **2\. Project Objectives**
 
@@ -100,9 +100,9 @@ The data is transformed into a form that is more suitable for:
 
 The curated data is stored in Delta format.
 
-**5\. Azure Databricks Implementation**
+**5\.  Databricks Implementation**
 
-The Databricks implementation uses Apache Spark for data processing.
+The Databricks implementation uses PySpark for data processing.
 
 ## **Databricks Architecture**
 
@@ -174,8 +174,8 @@ Although the overall data-processing logic is similar, the two implementations d
 | ----- | ----- | ----- |
 | **Processing engine** | Apache Spark | Apache Spark |
 | **Programming** | PySpark / Python | PySpark / Python |
-| **Source format** | JSON | JSON |
-| **File-based storage used** | Unity Catalog Volume | ADLS Gen2 |
+| **Source format** | JSON, CSV | JSON, CSV |
+| **File-based storage used** | Unity Catalog Volume and Databricks default storage for free edition | ADLS Gen2 |
 | **Data organization** | Unity Catalog | Synapse \+ storage paths |
 | **Bronze layer** | Unity Catalog Delta tables | Delta-based Bronze layer |
 | **Silver layer** | Unity Catalog Delta tables | Delta-based Silver layer |
