@@ -241,31 +241,25 @@ These checks help ensure that only valid and reliable data reaches the Gold laye
 
 # **10\. Challenges Faced and Solutions**
 
-## **Challenge 1 — Changing CSV to JSON**
-
-The source data was changed from CSV to JSON to meet the project requirement.
-
-**Solution:** Updated the Spark ingestion logic to read JSON while keeping the existing processing flow.
-
-## **Challenge 2 — Spark Output Files**
+## **Challenge 1 — Spark Output Files**
 
 Spark can generate multiple output files because processing is distributed.
 
 **Solution:** File handling was adjusted to work with Spark's distributed output structure.
 
-## **Challenge 3 — Synapse File Handling**
+## **Challenge 2 — Synapse File Handling**
 
 Handling Spark-generated files in Synapse required additional consideration.
 
 **Solution:** Output paths and file operations were adjusted to account for Spark-generated directories and part files.
 
-## **Challenge 4 — Data Quality Validation**
+## **Challenge 3 — Data Quality Validation**
 
 Cleaning data does not guarantee that it is valid.
 
 **Solution:** A separate validation stage was added between Silver and Gold.
 
-## **Challenge 5 — Pipeline Orchestration**
+## **Challenge 4 — Pipeline Orchestration**
 
 Running notebooks manually does not provide an automated workflow.
 
